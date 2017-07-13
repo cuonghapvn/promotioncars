@@ -51,7 +51,8 @@ app.use('/admin', express.static(path.join(__dirname, 'public')));
 
 //routers
 // app.use('/users', users);
-app.use('/', index);
+// app.use('/', index);
+app.use('/', express.static(path.join(__dirname, 'public/PivotLanding/')));
 
 // Active URL for helper
 var activeRoute = '';
