@@ -1,12 +1,12 @@
 var mongoose  = require('mongoose'),
     Schema    = mongoose.Schema,
-    urlMLocal = 'mongodb://xitrum4692:Xitrum4692@ds155582.mlab.com:55582/gemiphotos';
+    urlMLocal = 'mongodb://xitrum4692:Xitrum4692@ds159112.mlab.com:59112/promotioncars';
 
 // Uncomment for use mongo database
 mongoose.connect(urlMLocal, {
   useMongoClient: true,
   /* other options */
-  }, 
+  },
   function(err) {
     if (err) console.log(err);
 });
@@ -29,12 +29,12 @@ exports.getUsers = function(cb) {
 };
 
 var users = exports.users = [
-  new User({ 
-    id: 1, 
-    username: 'admin', 
-    password: 'admin', 
-    displayName: 'Jack', 
-    emails: [ { value: 'jack@example.com' } ] 
+  new User({
+    id: 1,
+    username: 'admin',
+    password: 'admin',
+    displayName: 'Tam',
+    emails: [ { value: 'tamtt4692@gmail.com' } ]
   })]
 
 // add users from collection mongo
