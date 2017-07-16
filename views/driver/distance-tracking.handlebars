@@ -1,0 +1,521 @@
+{{#extend 'styles'}}
+<!-- daterange picker -->
+<link rel="stylesheet" href="/admin/plugins/daterangepicker/daterangepicker-bs3.css"> {{/extend}}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    Quãng đường đi được
+    <small>quản lý thông tin quãng đường của tài xế</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li><a href="#">Driver</a></li>
+    <li class="active">Distance Tracking</li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">Quãng đường đi được theo <i>khoảng thời gian tự chọn</i></h3>
+        </div>
+        <div class="box-header">
+          <div class="col-xs-5">
+            <div class="form-group">
+              <label>Khoảng thời gian:</label>
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <i class="fa fa-clock-o"></i>
+                </div>
+                <input type="text" class="form-control pull-right .col-xs-6" id="reservationtime">
+              </div>
+              <!-- /.input group -->
+            </div>
+          </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <table id="example1" class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Tài xế</th>
+                <th>Phone</th>
+                <th>Biển số</th>
+                <th>HCM(km)</th>
+                <th>Total(km)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="./profile">Lâm Quí Việt</a></td>
+                <td>815-425-9176</td>
+                <td>319-26-XXXX</td>
+                <td>657</td>
+                <td>1266</td>
+              </tr>
+              <tr>
+                <td><a href="./profile">Lý Quang Tần</a></td>
+                <td>317-640-0406</td>
+                <td>314-27-XXXX</td>
+                <td>2930</td>
+                <td>3230</td>
+              </tr>
+              <tr>
+                <td><a href="./profile">Bùi Trọng Tuyến</a></td>
+                <td>706-350-0039</td>
+                <td>667-24-XXXX</td>
+                <td>735</td>
+                <td>1357</td>
+              </tr>
+              <tr>
+                <td><a href="./profile">Lâm Cẩm My</a></td>
+                <td>410-477-6462</td>
+                <td>220-05-XXXX</td>
+                <td>1055</td>
+                <td>2014</td>
+              </tr>
+              <tr>
+                <td><a href="./profile">Tạ Năng Nghiêm</a></td>
+                <td>716-844-7852</td>
+                <td>112-54-XXXX</td>
+                <td>1987</td>
+                <td>3869</td>
+              </tr>
+              <tr>
+                <td><a href="./profile">Vũ Thị Ngọc Nhứt</a></td>
+                <td>214-220-4345</td>
+                <td>456-09-XXXX</td>
+                <td>2807</td>
+                <td>4037</td>
+              </tr>
+              <tr>
+                <td><a href="./profile">Trần Đình Ngọt</a></td>
+                <td>818-640-7441</td>
+                <td>566-41-XXXX</td>
+                <td>2006</td>
+                <td>3497</td>
+              </tr>
+              <tr>
+                <td><a href="./profile">Liễu Hữu Tâm</a></td>
+                <td>541-596-5418</td>
+                <td>540-84-XXXX</td>
+                <td>2742</td>
+                <td>4696</td>
+              </tr>
+              <tr>
+                <td><a href="./profile">Lưu Cẩm Út</a></td>
+                <td>610-499-6207</td>
+                <td>188-58-XXXX</td>
+                <td>2039</td>
+                <td>2243</td>
+              </tr>
+              <tr>
+                <td><a href="./profile">Lê Thị Diệu Lên</a></td>
+                <td>616-458-2796</td>
+                <td>380-10-XXXX</td>
+                <td>1763</td>
+                <td>2625</td>
+              </tr>
+              <tr>
+                <td><a href="./profile">Nguyễn Thị Bạch Diệp</a></td>
+                <td>509-328-6622</td>
+                <td>531-92-XXXX</td>
+                <td>2937</td>
+                <td>4412</td>
+              </tr>
+              <tr>
+                <td><a href="./profile">Lưu Kiên Đường</a></td>
+                <td>212-263-2512</td>
+                <td>058-10-XXXX</td>
+                <td>622</td>
+                <td>639</td>
+              </tr>
+              <tr>
+                <td><a href="./profile">Tôn Thị Tuyết Chúc</a></td>
+                <td>662-447-2370</td>
+                <td>426-24-XXXX</td>
+                <td>2195</td>
+                <td>3059</td>
+              </tr>
+              <tr>
+                <td><a href="./profile">Phạm Khắc Chè</a></td>
+                <td>912-389-0917</td>
+                <td>671-26-XXXX</td>
+                <td>1686</td>
+                <td>2316</td>
+              </tr>
+              <tr>
+                <td><a href="./profile">Nguyễn Tố Toại</a></td>
+                <td>305-681-6800</td>
+                <td>265-57-XXXX</td>
+                <td>794</td>
+                <td>1388</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Dương Đông Năng</a></td>
+                <td>678-870-8018</td>
+                <td>670-01-XXXX</td>
+                <td>946</td>
+                <td>1211</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Đinh Thị Phi Lự</a></td>
+                <td>972-866-1946</td>
+                <td>458-61-XXXX</td>
+                <td>2333</td>
+                <td>2448</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Dương Quốc Vĩnh</a></td>
+                <td>417-691-1371</td>
+                <td>490-60-XXXX</td>
+                <td>1726</td>
+                <td>2899</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Phạm Xuân Cường</a></td>
+                <td>801-947-6422</td>
+                <td>647-44-XXXX</td>
+                <td>1805</td>
+                <td>3124</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">La Thị Ai Cầm</a></td>
+                <td>614-738-6353</td>
+                <td>287-56-XXXX</td>
+                <td>2719</td>
+                <td>3829</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Nguyễn Hồng Bội</a></td>
+                <td>419-470-0979</td>
+                <td>278-08-XXXX</td>
+                <td>1341</td>
+                <td>2586</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Vũ Thị Tố Lệ</a></td>
+                <td>305-396-9576</td>
+                <td>261-39-XXXX</td>
+                <td>1770</td>
+                <td>2049</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Luong Thị Ai Chạy</a></td>
+                <td>209-249-5339</td>
+                <td>550-62-XXXX</td>
+                <td>993</td>
+                <td>1642</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Ngô Thị Uyên</a></td>
+                <td>610-994-4739</td>
+                <td>209-09-XXXX</td>
+                <td>1572</td>
+                <td>1943</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Mai Nguyên Lạc</a></td>
+                <td>414-312-5240</td>
+                <td>396-24-XXXX</td>
+                <td>1139</td>
+                <td>1426</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Vũ Cẩm Hợi</a></td>
+                <td>630-354-3030</td>
+                <td>361-34-XXXX</td>
+                <td>1010</td>
+                <td>1846</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Đoàn Ngọc Trang</a></td>
+                <td>201-638-1602</td>
+                <td>150-03-XXXX</td>
+                <td>2650</td>
+                <td>3887</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Vũ Cảnh Tự</a></td>
+                <td>956-799-5548</td>
+                <td>637-22-XXXX</td>
+                <td>2439</td>
+                <td>4784</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Chung Thị Liên Bích</a></td>
+                <td>812-661-2967</td>
+                <td>307-48-XXXX</td>
+                <td>1105</td>
+                <td>1618</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Bùi Tố Vi</a></td>
+                <td>757-883-3543</td>
+                <td>230-98-XXXX</td>
+                <td>2222</td>
+                <td>4082</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Mai Công Tùng</a></td>
+                <td>954-261-1097</td>
+                <td>769-36-XXXX</td>
+                <td>1991</td>
+                <td>2380</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Hà Ngọc Diệp</a></td>
+                <td>203-220-9299</td>
+                <td>047-98-XXXX</td>
+                <td>2452</td>
+                <td>3771</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Trương Kim Khánh</a></td>
+                <td>201-986-0509</td>
+                <td>149-01-XXXX</td>
+                <td>586</td>
+                <td>658</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Hàn Thị Phi Kiều</a></td>
+                <td>504-896-1846</td>
+                <td>433-62-XXXX</td>
+                <td>1774</td>
+                <td>3072</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Phạm Vĩnh Chua</a></td>
+                <td>361-343-0943</td>
+                <td>459-81-XXXX</td>
+                <td>2377</td>
+                <td>3829</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Nguyễn Thị Thu Thà</a></td>
+                <td>631-851-8332</td>
+                <td>088-90-XXXX</td>
+                <td>1524</td>
+                <td>2247</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Huỳnh Thắng Diện</a></td>
+                <td>859-525-7064</td>
+                <td>401-25-XXXX</td>
+                <td>2315</td>
+                <td>2925</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Đoàn Trọng Quảng</a></td>
+                <td>904-220-5366</td>
+                <td>263-18-XXXX</td>
+                <td>2819</td>
+                <td>4339</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Quynh Thị Lệ Hạ</a></td>
+                <td>213-235-7578</td>
+                <td>567-17-XXXX</td>
+                <td>2026</td>
+                <td>3734</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Hoàng Thị Mai Chạy</a></td>
+                <td>262-347-8662</td>
+                <td>392-06-XXXX</td>
+                <td>1509</td>
+                <td>2698</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Lâm Thị Phương Mỹ</a></td>
+                <td>773-659-6070</td>
+                <td>324-54-XXXX</td>
+                <td>1905</td>
+                <td>3588</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Đinh Lệ Nhã</a></td>
+                <td>781-984-3105</td>
+                <td>021-80-XXXX</td>
+                <td>2575</td>
+                <td>5062</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Thạch Hoàng Xê</a></td>
+                <td>402-391-0412</td>
+                <td>505-84-XXXX</td>
+                <td>988</td>
+                <td>1869</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Lý Khắc Rô</a></td>
+                <td>828-268-1480</td>
+                <td>683-01-XXXX</td>
+                <td>567</td>
+                <td>859</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Lưu Trọng Phát</a></td>
+                <td>646-879-2072</td>
+                <td>088-56-XXXX</td>
+                <td>2103</td>
+                <td>2121</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Huỳnh Như Nhạn</a></td>
+                <td>702-497-1884</td>
+                <td>530-86-XXXX</td>
+                <td>1472</td>
+                <td>2887</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Hàn Thị Ái Thoa</a></td>
+                <td>847-417-5146</td>
+                <td>327-80-XXXX</td>
+                <td>2226</td>
+                <td>4213</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Thạch Thành Phong</a></td>
+                <td>714-686-5498</td>
+                <td>606-09-XXXX</td>
+                <td>1549</td>
+                <td>2159</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Phan Thị Phương Mỹ</a></td>
+                <td>620-233-4324</td>
+                <td>509-66-XXXX</td>
+                <td>2744</td>
+                <td>4471</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Hà Kim Đắc</a></td>
+                <td>267-305-2713</td>
+                <td>175-42-XXXX</td>
+                <td>2220</td>
+                <td>2444</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Lâm Kiên Rô</a></td>
+                <td>609-965-4905</td>
+                <td>142-24-XXXX</td>
+                <td>1027</td>
+                <td>1547</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Thủy Trọng Dân</a></td>
+                <td>585-264-8508</td>
+                <td>088-42-XXXX</td>
+                <td>2952</td>
+                <td>5292</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Văn Quang Cơ</a></td>
+                <td>254-494-1512</td>
+                <td>635-26-XXXX</td>
+                <td>2813</td>
+                <td>3037</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Lê Thị Ai Ty</a></td>
+                <td>317-669-0697</td>
+                <td>310-06-XXXX</td>
+                <td>2881</td>
+                <td>4236</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Vương Lê Lại</a></td>
+                <td>727-530-7224</td>
+                <td>262-43-XXXX</td>
+                <td>2020</td>
+                <td>3395</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Đỗ Thị Chi Trang</a></td>
+                <td>443-864-3274</td>
+                <td>217-37-XXXX</td>
+                <td>2369</td>
+                <td>3576</td>
+
+              </tr>
+              <tr>
+                <td><a href="./profile">Đỗ Thị Kim Hạnh</a></td>
+                <td>330-739-4635</td>
+                <td>297-36-XXXX</td>
+                <td>911</td>
+                <td>1358</td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+    </div>
+    <!-- /.col -->
+  </div>
+  <!-- /.row -->
+</section>
+<!-- /.content -->
+{{#extend 'scripts'}}
+<!-- DataTables -->
+<script src="/admin/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="/admin/plugins/datatables/dataTables.bootstrap.min.js"></script>
+
+<script src="/admin/plugins/moment.js/moment.min.js"></script>
+<script src="/admin/plugins/daterangepicker/daterangepicker.js"></script>
+<!-- page script -->
+<script>
+  $(function () {
+    $("#example1").DataTable();
+    $('#reservationtime').daterangepicker({ timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A' });
+  });
+
+</script>
+{{/extend}}

@@ -1,0 +1,386 @@
+{{#extend 'styles'}}
+<!-- daterange picker -->
+<link rel="stylesheet" href="/admin/plugins/daterangepicker/daterangepicker-bs3.css"> {{/extend}}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    Thông tin tài xế
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li><a href="#">Examples</a></li>
+    <li class="active">User profile</li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+  <div class="row">
+    <div class="col-md-3">
+
+      <!-- Profile Image -->
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">Thông tin hệ thống</h3>
+        </div>
+        <div class="box-body box-profile">
+          <img class="profile-user-img img-responsive img-circle" src="/admin/admin-lte/img/user3-128x128.jpg" alt="User profile picture">
+
+          <h3 class="profile-username text-center">Lê Thị Diệu Liên</h3>
+
+           <p class="text-muted text-center">Mazda CX-5</p> 
+
+          <ul class="list-group list-group-unbordered">
+            <li class="list-group-item">
+              <b>Số cuốc đã chạy</b> <a class="pull-right">543</a>
+            </li>
+            <li class="list-group-item">
+              <b>Số KM đã chạy</b> <a class="pull-right">1,322</a>
+            </li>
+            <li class="list-group-item">
+              <b>Biển số xe</b> <a class="pull-right">59A-123.45</a>
+            </li>
+            <li class="list-group-item">
+              <b>Trạng thái hiện tại</b> <a class="pull-right"><span class="label label-success">Hoạt động</span></a>
+            </li>
+          </ul>
+
+          {{!-- <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a> --}}
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+
+      <!-- About Me Box -->
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">Thông tin cá nhân</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          <strong><i class="fa fa-phone margin-r-5"></i> Số điện thoại</strong>
+
+          <p class="text-muted">
+            0935010203
+          </p>
+
+          <hr>
+
+          <strong><i class="fa fa-map-marker margin-r-5"></i> Địa chỉ</strong>
+
+          <p class="text-muted">3 Trần Não, Khu phố 2, Bình An, Quận 2, Hồ Chí Minh, Việt Nam</p>
+
+          <hr>
+          
+          <strong><i class="fa fa-file-text-o margin-r-5"></i> Số CMND/Passport</strong>
+
+          <p class="text-muted">
+            245759901
+          </p>
+
+          {{!-- <hr>
+
+          <strong><i class="fa fa-pencil margin-r-5"></i> Skills</strong>
+
+          <p>
+            <span class="label label-danger">UI Design</span>
+            <span class="label label-success">Coding</span>
+            <span class="label label-info">Javascript</span>
+            <span class="label label-warning">PHP</span>
+            <span class="label label-primary">Node.js</span>
+          </p>
+
+          <hr>
+
+          <strong><i class="fa fa-file-text-o margin-r-5"></i> Notes</strong>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p> --}}
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+    </div>
+    <!-- /.col -->
+    <div class="col-md-9">
+      <!-- Horizontal Form -->
+      <div class="box box-info">
+        <div class="box-header with-border">
+          <h3 class="box-title">Nhật ký hành trình</h3>
+        </div>
+        <div class="box-header">
+          <div class="col-xs-5">
+            <div class="form-group">
+              <label>Khoảng thời gian:</label>
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <i class="fa fa-clock-o"></i>
+                </div>
+                <input type="text" class="form-control pull-right .col-xs-6" id="reservationtime">
+              </div>
+              <!-- /.input group -->
+            </div>
+          </div>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <div class="box-body">
+          <table id="nhatkyhanhtrinh" class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Thời điểm</th>
+                <th>Khoảng thời gian</th>
+                <th>Sự kiện</th>
+                <th>Địa điểm</th>
+                <th>Ghi chú</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>07/01/2017 00:16</td>
+                <td></td>
+                <td><span class="label label-success">Mở máy</span></td>
+                <td>3 Trần Não, Khu phố 2, Bình An, Quận 2, Hồ Chí Minh, Việt Nam...</td>
+                <td>Cuốc - 10670</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:18</td>
+                <td>00:01:36</td>
+                <td><span class="label label-info">Cập nhật</span></td>
+                <td>Song Hành, Khu đô thị mới An Phú - An Khánh, An Phú, Quận 2, Hồ Chí Minh, Việt Nam ..</td>
+                <td>Cập nhật vị trí</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td><span class="label label-danger">Dừng</span></td>
+                <td>Song Hành, Khu đô thị mới An Phú - An Khánh, An Phú, Quận 2, Hồ Chí Minh, Việt Nam ..</td>
+                <td>Dừng</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:19</td>
+                <td>00:01:20</td>
+                <td><span class="label label-success">Chạy lại</span></td>
+                <td></td>
+                <td>Dừng - 00:01:34</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:20</td>
+                <td>00:01:20</td>
+                <td><span class="label label-danger">Dừng</span></td>
+                <td>Song Hành, Khu đô thị mới An Phú - An Khánh, An Phú, Quận 2, Hồ Chí Minh, Việt Nam ..</td>
+                <td>Dừng</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:21</td>
+                <td>00:00:51</td>
+                <td><span class="label label-success">Chạy lại</span></td>
+                <td></td>
+                <td>Dừng - 00:00:35</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:23</td>
+                <td>00:01:51</td>
+                <td><span class="label label-info">Cập nhật</span></td>
+                <td>Trần Não, Thảo Điền, Quận 2, Hồ Chí Minh, Việt Nam ..</td>
+                <td>Cập nhật vị trí</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:24</td>
+                <td>00:01:01</td>
+                <td><span class="label label-danger">Dừng</span></td>
+                <td>Cầu Sài Gòn, P. Bình An, Q. 2, TP. Hồ Chí Minh .</td>
+                <td>Dừng</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:25</td>
+                <td>00:00:31</td>
+                <td><span class="label label-success">Chạy lại</span></td>
+                <td></td>
+                <td>Dừng - 00:00:14</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:26</td>
+                <td>00:00:53</td>
+                <td><span class="label label-info">Cập nhật</span></td>
+                <td>Cầu Sài Gòn, phường 22, Bình Thạnh, Hồ Chí Minh, Việt Nam ..</td>
+                <td>Cập nhật vị trí</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:27</td>
+                <td>00:01:10</td>
+                <td><span class="label label-danger">Dừng</span></td>
+                <td>40 Điện Biên Phủ, phường 25, Bình Thạnh, Hồ Chí Minh, Việt Nam ..</td>
+                <td>Dừng</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:27</td>
+                <td>00:00:30</td>
+                <td><span class="label label-info">Cập nhật</span></td>
+                <td>Cầu vượt Hàng Xanh, phường 21, Bình Thạnh, Hồ Chí Minh, Việt Nam ..</td>
+                <td>Cập nhật vị trí</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:27</td>
+                <td>00:00:01</td>
+                <td><span class="label label-success">Chạy lại</span></td>
+                <td></td>
+                <td>Dừng - 00:00:14</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:30</td>
+                <td>00:02:32</td>
+                <td><span class="label label-info">Cập nhật</span></td>
+                <td>395 Bạch Đằng, 15, Bình Thạnh, Hồ Chí Minh, Việt Nam ..</td>
+                <td>Cập nhật vị trí</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:31</td>
+                <td>00:00:56</td>
+                <td><span class="label label-danger">Dừng</span></td>
+                <td>37 Võ Trường Toản, phường 2, Bình Thạnh, Hồ Chí Minh, Việt Nam ..</td>
+                <td>Dừng</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:32</td>
+                <td>00:00:55</td>
+                <td><span class="label label-success">Chạy lại</span></td>
+                <td></td>
+                <td>Dừng - 00:00:39</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:33</td>
+                <td>00:01:24</td>
+                <td><span class="label label-info">Cập nhật</span></td>
+                <td>135-143 Lê Quang Định, phường 14, Bình Thạnh, Hồ Chí Minh, Việt Nam ..</td>
+                <td>Cập nhật vị trí</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:36</td>
+                <td>00:02:30</td>
+                <td><span class="label label-info">Cập nhật</span></td>
+                <td>466 Lê Quang Định, 11, Bình Thạnh, Hồ Chí Minh, Việt Nam ..</td>
+                <td>Cập nhật vị trí</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td><span class="label label-danger">Dừng</span></td>
+                <td>466 Lê Quang Định, 11, Bình Thạnh, Hồ Chí Minh, Việt Nam ..</td>
+                <td>Dừng</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:36</td>
+                <td>00:00:30</td>
+                <td><span class="label label-success">Chạy lại</span></td>
+                <td></td>
+                <td>Dừng - 00:00:14</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:38</td>
+                <td>00:01:28</td>
+                <td><span class="label label-danger">Dừng</span></td>
+                <td>13 Nguyên Hồng, 1, Gò Vấp, Hồ Chí Minh, Việt Nam ..</td>
+                <td>Dừng</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:38</td>
+                <td>00:00:40</td>
+                <td><span class="label label-success">Chạy lại</span></td>
+                <td></td>
+                <td>Dừng - 00:00:28</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:39</td>
+                <td>00:00:34</td>
+                <td><span class="label label-info">Cập nhật</span></td>
+                <td>23 Nguyễn Văn Nghi, 4, Gò Vấp, Hồ Chí Minh, Việt Nam ..</td>
+                <td>Cập nhật vị trí</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:41</td>
+                <td>00:01:58</td>
+                <td><span class="label label-danger">Dừng</span></td>
+                <td>456 Nguyễn Thái Sơn, 5, Gò Vấp, Hồ Chí Minh, Việt Nam ..</td>
+                <td>Dừng</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:41</td>
+                <td>00:00:11</td>
+                <td><span class="label label-success">Chạy lại</span></td>
+                <td></td>
+                <td>Dừng - -00:00:04</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:42</td>
+                <td>00:00:51</td>
+                <td><span class="label label-info">Cập nhật</span></td>
+                <td>274 Dương Quảng Hàm, phường 5, Gò Vấp, Hồ Chí Minh, Việt Nam ..</td>
+                <td>Cập nhật vị trí</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:45</td>
+                <td>00:02:57</td>
+                <td><span class="label label-info">Cập nhật</span></td>
+                <td>Đường 20, phường 5, Gò Vấp, Hồ Chí Minh, Việt Nam ..</td>
+                <td>Cập nhật vị trí</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:45</td>
+                <td>00:00:21</td>
+                <td><span class="label label-danger">Dừng</span></td>
+                <td>Đường 20, phường 5, Gò Vấp, Hồ Chí Minh, Việt Nam ..</td>
+                <td>Dừng</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:47</td>
+                <td>00:01:49</td>
+                <td><span class="label label-success">Chạy lại</span></td>
+                <td></td>
+                <td>Dừng - 00:01:34</td>
+              </tr>
+              <tr>
+                <td>07/01/2017 00:50</td>
+                <td>00:03:24</td>
+                <td><span class="label label-danger">Dừng</span></td>
+                <td>332 Dương Quảng Hàm, phường 5, Gò Vấp, Hồ Chí Minh, Việt Nam ..</td>
+                <td>Dừng</td>
+              </tr>
+
+            </tbody>
+          </table>
+          <!-- /.tab-pane -->
+        </div>
+        <!-- /.tab-content -->
+      </div>
+      <!-- /.nav-tabs-custom -->
+    </div>
+    <!-- /.col -->
+  </div>
+  <!-- /.row -->
+
+</section>
+<!-- /.content -->
+{{#extend 'scripts'}}
+<!-- DataTables -->
+<script src="/admin/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="/admin/plugins/datatables/dataTables.bootstrap.min.js"></script>
+
+<script src="/admin/plugins/moment.js/moment.min.js"></script>
+<script src="/admin/plugins/daterangepicker/daterangepicker.js"></script>
+<!-- page script -->
+<script>
+  $(function () {
+    $("#nhatkyhanhtrinh").DataTable({
+	      "paging": true,
+	      "lengthChange": true,
+	      "searching": false,
+	      "ordering": false,
+	      "info": false,
+	      "autoWidth": true
+	    });
+    $('#reservationtime').daterangepicker({ timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A' });
+  });
+
+</script>
+{{/extend}}
