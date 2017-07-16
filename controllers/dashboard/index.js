@@ -4,7 +4,7 @@ exports.prefix = '/dashboard';
 
 exports.index = function(request, response) {
 	response.render('dashboard/index', {
-		title: 'Blank Page'
+		title: 'Dashboard Analytics'
 	});
 };
 exports.v1 = function(request, response) {
