@@ -8,7 +8,7 @@
               <img src="/admin/admin-lte/img/avatar.png" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-              <p>Driver 001</p>
+              <p>Manager 001</p>
               <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
           </div>
@@ -27,34 +27,34 @@
             <li class="header">MAIN NAVIGATION</li>
             <li class="{{{activeRoute 'dashboard.index'}}}">
               <a href="{{{url 'dashboard.index'}}}">
-                <i class="fa fa-dashboard"></i> <span>Dashboard</span> <small class="label pull-right bg-green">Hot</small>
+                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
               </a>
             </li>
             <li class="{{{activeRoute 'dashboard.current-position'}}}">
               <a href="{{{url 'dashboard.current-position'}}}">
-                <i class="fa fa-map-marker"></i> <span>Vị trí hiện tại</span> <small class="label pull-right bg-green">Hot</small>
+                <i class="fa fa-map-marker"></i> <span>Vị trí hiện tại</span>
               </a>
             </li>
             <li class="{{{activeRoute 'driver.distanceTracking'}}}">
               <a href="{{{url 'driver.distanceTracking'}}}">
-                <i class="fa fa-th"></i> <span>Distance Tracking</span> <small class="label pull-right bg-green">Hot</small>
+                <i class="fa fa-th"></i> <span>Theo dõi quãng đường</span>
               </a>
             </li>
             <li class="treeview {{{activeRoutes 'user.list,user.show,user.edit,user.new'}}}">
               <a href="#">
-                <i class="fa fa-users"></i> <span>Drivers</span>
+                <i class="fa fa-users"></i> <span>Quản lý tài xế</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
                 <li class="{{{activeRoute 'user.new'}}}">
-                  <a href="{{{url 'user.new'}}}"><i class="fa fa-circle-o"></i> New User</a>
+                  <a href="{{{url 'user.new'}}}"><i class="fa fa-circle-o"></i> Đăng ký tài xế</a>
                 </li>
                 <li class="{{{activeRoute 'user.list'}}}">
-                  <a href="{{{url 'user.list'}}}"><i class="fa fa-circle-o"></i> List Users</a>
+                  <a href="{{{url 'user.list'}}}"><i class="fa fa-circle-o"></i> Danh sách tài xế</a>
                 </li>
               </ul>
             </li>
-
+            <!--
             <li class="treeview {{{activeRoutes 'dashboard.index,dashboard.v1,dashboard.v2'}}}">
               <a href="#">
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
@@ -235,7 +235,8 @@
             </li>
             <li>
               <a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a>
-            </li>
+            </li>-->
+
           </ul>
         </section>
         <!-- /.sidebar -->
