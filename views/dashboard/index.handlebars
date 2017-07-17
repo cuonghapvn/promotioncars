@@ -56,7 +56,9 @@
         <!-- /.box-header -->
         <div class="box-body no-padding">
           <div class="row">
-            <div id="map" style="height: 100%"></div>
+            <div class="col-md-12">
+              <div id="map"></div>
+            </div>
           </div>
           <!-- /.row -->
         </div>
@@ -140,9 +142,9 @@
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="/admin/admin-lte/js/pages/dashboard3.js"></script>
 <!-- page script -->
-{{!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5aa4uYP35sVK0tnEATDJeWD4jMA7z_9U&libraries=visualization&callback=initMap">
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5aa4uYP35sVK0tnEATDJeWD4jMA7z_9U&libraries=visualization&callback=initMap">
 
-</script> --}}
+</script>
 <script>
   $(function () {
     /* ChartJS
@@ -217,11 +219,7 @@
   });
 
 </script>
-{{!-- <script>
-  // This example requires the Visualization library. Include the libraries=visualization
-  // parameter when you first load the API. For example:
-  // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=visualization">
-
+<script>
   var map, heatmap;
 
   function initMap() {
@@ -741,5 +739,6 @@
       new google.maps.LatLng(37.751266, -122.403355)
     ];
   }
-</script> --}}
+
+</script>
 {{/extend}}
