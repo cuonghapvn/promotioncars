@@ -17,3 +17,9 @@ exports.v2 = function(request, response) {
 		title: 'V2'
 	});
 };
+
+exports["current-position"]= function(request, response) {
+	response.render('dashboard/current-position', {
+		title: 'V2'
+	});
+};
