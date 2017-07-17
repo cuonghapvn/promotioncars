@@ -25,11 +25,14 @@
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
-            <li class="treeview {{{activeRoutes 'dashboard.index,dashboard.v1,dashboard.v2'}}}">
+            {{!-- <li class="treeview {{{activeRoutes 'dashboard.index,dashboard.v1,dashboard.v2'}}}">
               <a href="#">
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
+                <li class="{{{activeRoute 'dashboard.index'}}}">
+                  <a href="{{{url 'dashboard.index'}}}"><i class="fa fa-circle-o"></i> Dashboard</a>
+                </li>
                 <li class="{{{activeRoute 'dashboard.v1'}}}">
                   <a href="{{{url 'dashboard.v1'}}}"><i class="fa fa-circle-o"></i> Dashboard v1</a>
                 </li>
@@ -37,6 +40,11 @@
                   <a href="{{{url 'dashboard.v2'}}}"><i class="fa fa-circle-o"></i> Dashboard v2</a>
                 </li>
               </ul>
+            </li> --}}
+            <li class="{{{activeRoute 'dashboard.index'}}}">
+              <a href="{{{url 'dashboard.index'}}}">
+                <i class="fa fa-dashboard"></i> <span>Dashboard</span> <small class="label pull-right bg-green">Hot</small>
+              </a>
             </li>
             {{!
             <li class="treeview">
@@ -60,6 +68,11 @@
                 </li>
               </ul>
             </li>}}
+            <li class="{{{activeRoute 'driver.distanceTracking'}}}">
+              <a href="{{{url 'driver.distanceTracking'}}}">
+                <i class="fa fa-th"></i> <span>Distance Tracking</span> <small class="label pull-right bg-green">Hot</small>
+              </a>
+            </li>
             <li class="{{{activeRoute 'widgets.index'}}}">
               <a href="{{{url 'widgets.index'}}}">
                 <i class="fa fa-th"></i> <span>Widgets</span> <small class="label pull-right bg-green">Hot</small>
