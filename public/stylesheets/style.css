@@ -6,3 +6,7 @@
 a {
   color: #00B7FF;
 }
+
+#current-position-map {
+  height: 600px;
+}

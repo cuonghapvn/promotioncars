@@ -20,6 +20,6 @@ exports.v2 = function(request, response) {
 
 exports["current-position"]= function(request, response) {
 	response.render('dashboard/current-position', {
-		title: 'V2'
+		title: 'Vị trí hiện tại'
 	});
 };
